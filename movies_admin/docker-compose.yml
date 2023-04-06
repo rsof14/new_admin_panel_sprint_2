@@ -5,7 +5,6 @@ services:
       container_name: pgdb
       volumes:
         - pgdbdata:/var/lib/postgresql/data/
-#        - ./pgdb/movies_database.sql:/docker-entrypoint-initdb.d/movies_database.sql
         - ./pgdb/dump.sql:/docker-entrypoint-initdb.d/movies_schema_dump.sql
       env_file:
         - ./config/.env
